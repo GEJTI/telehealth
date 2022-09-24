@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgTerms"
+            android:layout_centerVertical="true"
+            app:tint="#22C7B8"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/medicare" />
+        <TextView
+            android:id="@+id/txtTermsAndCondition"
+            android:layout_toEndOf="@+id/imgTerms"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="#22C7B8"
+            android:text="Terms and Conditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/imgMedicare"
+            android:layout_toEndOf="@+id/txtTermsAndCondition"
+            app:tint="#22C7B8"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/terms" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="15dp"
+        android:id="@+id/txtTerms"
+        android:textAlignment="viewStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+<!--    <TextView-->
+<!--        android:text="-->
+<!--        android:id="@+id/txtTerms"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+        <com.example.telehealth.customfonts.Button_Poppins_Regular
+            android:id="@+id/btnAccept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="18.7dp"
+            android:layout_marginRight="62dp"
+            android:background="@drawable/blue_fill__rounded_color"
+            android:gravity="center"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="Accept"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_marginBottom="30dp"
+            android:textSize="13sp" />
+    </LinearLayout>
+</ScrollView>

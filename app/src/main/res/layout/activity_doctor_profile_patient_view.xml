@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".patient.DoctorProfileActivity">
+
+        <include layout="@layout/app_bar_layout" android:id="@+id/main_page_toolbar" />
+
+        <RelativeLayout
+            android:layout_below="@+id/main_page_toolbar"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/viewProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/medical_team"/>
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/profile_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:text="Doctor Name"
+                            android:textSize="25sp"
+                            android:textColor="#22C7B8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtPatientName"/>
+                        <TextView
+                            android:text="Doctor Name"
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtSpecialization"/>
+                </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/viewProfile"
+            android:orientation="vertical"
+            android:id="@+id/viewGiveFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/filledTextField"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter feedback">
+
+                        <!--this is the actual edit text which takes the input-->
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editFeedback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:minLines="2"
+                            android:maxLines="5"
+                            android:gravity="top|start"
+                            android:scrollbars="vertical" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    app:cornerRadius="100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SEND"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:id="@+id/btnSendFeedback"
+                    app:icon="@drawable/ic_send"
+                    app:backgroundTint="#22C7B8"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@id/viewGiveFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/txtFeedbacks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Feedbacks"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_below="@+id/txtFeedbacks"
+                    android:id="@+id/displayFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                     />
+                <TextView
+                    android:id="@+id/txtNoRecord"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No feedback yet."/>
+        </RelativeLayout>
+
+
+</RelativeLayout>

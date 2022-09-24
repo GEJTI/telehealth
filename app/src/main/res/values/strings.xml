@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MediCare</string>
+    <string name="question1">What medical condition/problem you want for checkup?</string>
+    <string name="neurologist">Abnormality of the heart</string>
+    <string name="neurologist2">Epilepsy, stroke, multiple sclerosis and other brain abnormality condition</string>
+    <string name="oncologist">Lump and tumors in the other parts of the body</string>
+    <string name="pathologist">Congenital, Hereditary, and Neonatal Diseases and Abnormalities</string>
+    <string name="hematologist">Hemophilia, leukemia, lymphoma and sickle-cell anemia</string>
+    <string name="dermatologist">Eczema,Psoriasis,Acne,Skin infections etc.</string>
+    <string name="none">None</string>
+
+    <string-array name="doctor_specializations_array">
+        <item>Neurologist</item>
+        <item>Oncologist</item>
+        <item>Pathologist</item>
+        <item>Hematologist</item>
+        <item>Dermatologist</item>
+    </string-array>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:text="Select File To Send"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PHOTO"
+        app:iconSize="32dp"
+        app:icon="@drawable/ic_photo"
+        android:id="@+id/btnPhoto"
+        app:iconGravity="textStart"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PDF File"
+        android:id="@+id/btnPDF"
+        app:iconSize="28dp"
+        app:icon="@drawable/ic_pdf_file"
+        app:iconGravity="textStart"/>
+
+</LinearLayout>

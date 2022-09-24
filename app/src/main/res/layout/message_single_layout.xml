@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewSender"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/loading_placeholder"
+            android:layout_alignParentTop="true"
+            android:id="@+id/sender_message_sender_profile_image" />
+
+        <TextView
+            android:id="@+id/sender_txt_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_toRightOf="@id/sender_message_sender_profile_image"
+            android:background="@drawable/message_box_sender"
+            android:textColor="@color/white"
+            android:text="etst"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:layout_alignParentTop="true"
+            />
+
+        <ImageView
+            android:id="@+id/sender_msg_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/sender_message_sender_profile_image"
+            android:scaleType="fitXY"
+            android:src="@drawable/loading_placeholder" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/sender_dl_qr"
+            android:layout_alignEnd="@+id/sender_msg_image"
+            android:layout_below="@+id/sender_msg_image"
+            android:padding="0dp"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:textSize="8sp"
+            android:text="Download"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewReceiver"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/loading_placeholder"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/receiver_message_sender_profile_image" />
+
+        <TextView
+            android:id="@+id/receiver_txt_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_toLeftOf="@id/receiver_message_sender_profile_image"
+            android:background="@drawable/message_box_receive"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:layout_alignParentTop="true"
+            />
+
+        <ImageView
+            android:id="@+id/receiver_msg_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/receiver_message_sender_profile_image"
+            android:scaleType="fitXY"
+            android:src="@drawable/loading_placeholder" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/receiver_dl_qr"
+            android:layout_alignEnd="@+id/receiver_msg_image"
+            android:layout_below="@+id/receiver_msg_image"
+            android:padding="0dp"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:textSize="8sp"
+            android:text="Download"/>
+    </RelativeLayout>
+
+</RelativeLayout>

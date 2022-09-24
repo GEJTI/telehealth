@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4A8B8D"
+    tools:context=".doctor.DoctorChatActivity">
+
+    <include layout="@layout/app_bar_layout" android:id="@+id/main_page_toolbar" />
+
+    <FrameLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:alpha="0.3"
+            android:src="@drawable/medicare"
+            android:layout_gravity="center"/>
+
+
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/message_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_below="@+id/main_page_toolbar"
+        android:layout_alignParentStart="true" />
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:weightSum="6"
+        android:background="#79C1BA"
+        android:id="@+id/linearLayout">
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/send_image"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight=".7"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:onClick="sendAttachFile"-->
+<!--            android:src="@drawable/ic_attach_file" />-->
+        <ImageView
+            android:id="@+id/send_image"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight=".7"
+            android:scaleType="fitCenter"
+            android:onClick="sendAttachFile"
+            android:src="@drawable/ic_media_white" />
+
+        <ImageView
+            android:id="@+id/send_file"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight=".7"
+            android:scaleType="fitCenter"
+            android:onClick="sendQR"
+            android:src="@drawable/ic_qr"
+          />
+
+        <EditText
+            android:id="@+id/send_text_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.7"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/white"
+            android:textCursorDrawable="@null"
+            android:textColor="@color/white"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+            android:id="@+id/message_send_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.8"
+            android:src="@drawable/ic_send"
+            android:scaleType="fitCenter" />
+
+    </LinearLayout>
+
+</RelativeLayout>

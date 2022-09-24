@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.telehealth">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Telehealth.NoActionBar">
+        <activity
+            android:name=".patient.DoctorProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".doctor.CheckUpHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientCheckUpQuestion"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientCheckUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorSignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".doctor.DoctorProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".doctor.PrescriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".doctor.DoctorPrescriptionListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".patient.PatientInboxActivity"
+            android:exported="false" />
+        <activity
+            android:name=".doctor.DoctorSettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientProfileSettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".doctor.DoctorChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientSignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientSignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
